@@ -1,0 +1,37 @@
+{
+  "plants": [
+    {
+      "id": 1,
+      "name": "Diego",
+      "scientificName": "Euphorbia Eritrea",
+      "status": "Healthy",
+      "water": "Every 3 weeks",
+      "light": "Natural light",
+      "temp": "Minimum of 7°C",
+      "description": "Euphorbia Eritrea is a cactus-like plant that grows slowly and requires little maintenance.",
+      "imageUrl": "./assets/images/diego.png"
+    },
+    {
+      "id": 2,
+      "name": "Cassy",
+      "scientificName": "Strelitzia Nicolai",
+      "status": "Warning",
+      "water": "Every 3 weeks",
+      "light": "Natural light",
+      "temp": "Minimum of 7°C",
+      "description": "Euphorbia Eritrea is a cactus-like plant that grows slowly and requires little maintenance.",
+      "imageUrl": "./assets/images/cassy.png"
+    },
+    {
+      "id": 3,
+      "name": "Luna",
+      "scientificName": "Aloe Vera",
+      "status": "Healthy",
+      "water": "Every 3 weeks",
+      "light": "Natural light",
+      "temp": "Minimum of 7°C",
+      "description": "Euphorbia Eritrea is a cactus-like plant that grows slowly and requires little maintenance.",
+      "imageUrl": "./assets/images/luna.png"
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-no-padding">
+    <ion-icon
+      slot="start"
+      size="large"
+      name="menu"
+      class="ion-padding"
+    ></ion-icon>
+    <img class="top-img" src="./assets/plant-top.jpg" alt="" />
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ng-container *ngIf="plants; else elseTemplate">
+    <ion-text class="ion-padding">
+      <h1 class="title ion-padding">My plants</h1>
+    </ion-text>
+    <ion-card
+      class="plant-card"
+      *ngFor="let plant of plants"
+      routerLink="/detail/{{ plant.id }}"
+    >
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4" class="img-col">
+            <img src="{{plant.imageUrl}}" alt="" class="plant-img" />
+          </ion-col>
+          <ion-col size="8" class="detail-col ion-padding">
+            <ion-text color="light">
+              <h1 class="plant-name">{{plant.name}}</h1>
+              <p class="plant-sci-name">{{plant.scientificName}}</p>
+              <ion-chip
+                color="{{plant.status === 'Healthy' ? 'light' : 'warning'}}"
+              >
+                <div *ngIf="plant.status === 'Warning'">
+                  <ion-icon slot="start" name="water-outline"></ion-icon>
+                </div>
+                <ion-label color=""> {{plant.status}} </ion-label>
+              </ion-chip>
+            </ion-text>
+            <ion-row class="ion-justify-content-end">
+              <ion-icon
+                size="large"
+                name="arrow-forward-outline"
+                color="light"
+              ></ion-icon>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </ng-container>
+
+  <ng-template #elseTemplate>
+    <div class="ion-padding custom-skeleton">
+      <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+      <ion-skeleton-text animated></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+      <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+    </div>
+
+    <ion-list>
+      <ion-list-header>
+        <ion-label>
+          <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+        </ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-avatar>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <ion-skeleton-text animated></ion-skeleton-text>
+        </ion-thumbnail>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-skeleton-text
+          animated
+          style="width: 27px; height: 27px"
+          slot="start"
+        ></ion-skeleton-text>
+        <ion-label>
+          <h3>
+            <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+          </h3>
+          <p>
+            <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+          </p>
+          <p>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-template>
+</ion-content>

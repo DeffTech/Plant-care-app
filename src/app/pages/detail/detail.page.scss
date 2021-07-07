@@ -1,0 +1,98 @@
+.plant-name {
+  font-weight: 900;
+}
+
+ion-row.row-1 {
+  background: #fff;
+  border-radius: 0 0 3rem 3rem;
+  overflow: hidden;
+}
+
+ion-row.row-2,
+ion-row.row-3 {
+  .title {
+    margin: 0;
+  }
+}
+
+ion-row.row-3 {
+  justify-content: center;
+  align-items: center;
+}
+
+ion-col.detail-col {
+  display: flex;
+  align-items: center;
+}
+
+.my-chip {
+  background: #036655a4;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.plant-img {
+  height: 200px;
+}
+
+ion-col.progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--ion-color-secondary);
+  border-radius: 2.5rem 0 0 2.5rem;
+
+  .percent {
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  .percent svg {
+    width: 150px;
+    height: 150px;
+    position: relative;
+  }
+  .percent svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    stroke-linecap: round;
+  }
+  .percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: var(--ion-color-tertiary);
+  }
+  .percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(300 - (300 * 87) / 100);
+    stroke: var(--ion-color-light);
+  }
+  .percent .num {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: var(--ion-color-light);
+  }
+  .percent .num p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .percent .num p span {
+    font-size: 20px;
+  }
+}
