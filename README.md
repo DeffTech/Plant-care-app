@@ -40,6 +40,7 @@ ionic serve
 ## About Authors / Contributors
 
 [Zaydovaah](https://github.com/Zaydovaah)
+
 [ManuSquall](https://github.com/manusquall)
 
 ## License
